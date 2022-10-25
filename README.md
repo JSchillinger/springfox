@@ -19,6 +19,21 @@ Change `version` to the intended version in `build.gradle`
 version = '3.0.1'
 ```
 
+Replace credential in this block
+
+```
+nexusPublishing {
+  repositories {
+    myNexus {
+      nexusUrl = uri("https://nexus.privemanagers.com/repository/maven-releases/")
+      snapshotRepositoryUrl = uri("https://nexus.privemanagers.com/repository/maven-releases/")
+      username = "{USERNAME}"
+      password = "{PASSWORD}"
+    }
+  }
+}
+```
+
 Run the following to publish
 
 ```

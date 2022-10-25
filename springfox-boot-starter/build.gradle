@@ -1,8 +1,4 @@
-group = 'io.springfox'
-
-repositories {
-  mavenCentral()
-}
+group = 'com.privetechnologies'
 
 dependencies {
   api project(':springfox-oas')

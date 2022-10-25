@@ -76,7 +76,7 @@ subprojects {
 
 
   group = 'com.privetechnologies'
-  version = '3.0.1'
+  version = '3.0.2'
 
   task allDeps(type: DependencyReportTask) {}
 
@@ -130,8 +130,8 @@ nexusPublishing {
     myNexus {
       nexusUrl = uri("https://nexus.privemanagers.com/repository/maven-releases/")
       snapshotRepositoryUrl = uri("https://nexus.privemanagers.com/repository/maven-releases/")
-      username = "$nexusUsername"
-      password = "$nexusPassword"
+      username = ""
+      password = ""
     }
   }
 }
