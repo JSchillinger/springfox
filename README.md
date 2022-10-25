@@ -1,3 +1,34 @@
+# Prive Springfox fork
+
+Reason - this is to fix the recursive look up issue described here - https://github.com/springfox/springfox/issues/3224#issuecomment-923000168
+
+### Build
+
+Ensure the Nexus credential is set at the following location `$HOME/.gradle/gradle.properties`
+
+```
+nexusUsername={USERNAME}
+nexusPassword={PASSWORD}
+```
+
+### Publish
+
+Change `version` to the intended version in `build.gradle`
+
+```
+version = '3.0.1'
+```
+
+Run the following to publish
+
+```
+./gradlew publish
+```
+
+
+
+
+
 # Springfox
 
 [![Join the chat at https://gitter.im/springfox/springfox](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/springfox/springfox?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
