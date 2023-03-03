@@ -60,7 +60,7 @@ public class WebMvcRequestHandlerProvider implements RequestHandlerProvider {
       Optional<ServletContext> servletContext,
       HandlerMethodResolver methodResolver,
       List<RequestMappingInfoHandlerMapping> handlerMappings) {
-    this.handlerMappings = handlerMappings;
+    this.handlerMappings = handlerMappings.stream().filter(mapping -> mapping.getPatternParser() == null).collect(toList());
     this.methodResolver = methodResolver;
     this.contextPath = servletContext
         .map(ServletContext::getContextPath)
